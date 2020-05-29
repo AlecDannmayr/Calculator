@@ -61,7 +61,6 @@ class Calculator {
     this.currentOperandTextElement.innerText = this.currentOperand
     this.previousOperandTextElement.innerText = this.previousOperand
    }
-
 }
 
 const numberButtons = document.querySelectorAll('[data-number]')
@@ -90,5 +89,10 @@ operationButtons.forEach(button => {
 
 equalsButton.addEventListener('click', button => {
     calculator.compute()
+    calculator.updateDisplay()
+})
+
+allClearButton.addEventListener('click', button => {
+    calculator.clear()
     calculator.updateDisplay()
 })

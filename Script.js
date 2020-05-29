@@ -59,7 +59,8 @@ class Calculator {
 
    getDisplayNumber(number) {
        const floatNumber = parseFloat(number)
-       return number
+       if (isNaN(floatNumber)) return ''
+       return floatNumber.toLocaleString('en')
    }
 
    updateDisplay() {
